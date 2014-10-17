@@ -168,7 +168,8 @@ def _blosc_destroy():
     Finalize the Blosc library.
 
     """
-    blosc_destroy()
+    with nogil:
+        blosc_destroy()
 
 def blosc_version():
     """

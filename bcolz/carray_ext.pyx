@@ -83,7 +83,7 @@ cdef extern from "blosc.h":
         BLOSC_MAX_TYPESIZE
 
     void blosc_init()
-    void blosc_destroy()
+    void blosc_destroy() nogil
     void blosc_get_versions(char *version_str, char *version_date)
     int blosc_set_nthreads(int nthreads)
     int blosc_set_compressor(const char*compname)
